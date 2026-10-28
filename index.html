@@ -1,18 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Tu Nombre</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robert | Estrategia, operaciones e inteligencia artificial</title>
+<meta name="description" content="Gerente de Comercialización y Proyectos. Estrategia comercial, operaciones, automatización con IA y mercados, desde Tacna, Perú.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080b; --surface:#0d0f14; --line:rgba(232,217,168,.22);
+  --gold:#e8d9a8; --gold-dim:#a89c76; --text:#d9d6cc;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+
+header.top{position:sticky;top:0;z-index:5;background:rgba(7,8,11,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+header.top .mark{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:var(--gold);text-decoration:none}
+nav a{margin-left:26px;font-size:14px;text-decoration:none;color:var(--gold-dim);transition:color .2s}
+nav a:hover{color:var(--gold)}
+
+.hero{min-height:calc(100vh - 60px);display:grid;place-items:center;text-align:center;padding:56px 0;
+  background:radial-gradient(ellipse at 50% 38%,rgba(232,217,168,.08),transparent 62%)}
+.logo{width:min(440px,84vw);height:auto;filter:drop-shadow(0 0 10px rgba(232,217,168,.35));animation:pulse 6s ease-in-out infinite}
+.logo .tri{fill:none;stroke:var(--gold);stroke-width:.9}
+.logo .tie{stroke:var(--gold);stroke-width:.5;opacity:.7}
+.logo .inf{fill:none;stroke:var(--gold);stroke-width:1.6}
+.logo text{font-family:var(--serif);fill:var(--gold);font-size:15px;letter-spacing:.32em;text-anchor:middle}
+@keyframes pulse{0%,100%{filter:drop-shadow(0 0 6px rgba(232,217,168,.25))}50%{filter:drop-shadow(0 0 16px rgba(232,217,168,.5))}}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,7vw,76px);line-height:1.05;color:var(--gold);margin-top:38px;letter-spacing:.01em}
+.hero p.lead{max-width:560px;margin:22px auto 0;font-size:18px;color:var(--text)}
+.cta{display:inline-block;margin-top:36px;padding:14px 34px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:15px;letter-spacing:.04em;transition:background .25s,color .25s}
+.cta:hover{background:var(--gold);color:var(--bg)}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,46px);color:var(--gold);line-height:1.15;margin-bottom:32px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p+p{margin-top:18px}
+.facts{list-style:none;border-left:1px solid var(--line);padding-left:30px}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--text)}
+.facts li:last-child{border-bottom:0}
+.facts b{display:block;font-weight:400;color:var(--gold);font-family:var(--serif);font-size:20px}
+
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.area{background:var(--bg);padding:34px 30px}
+.area h3{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--gold);margin-bottom:10px}
+.area p{font-size:15.5px;color:var(--text)}
+
+.contact{text-align:center}
+.contact p{max-width:520px;margin:0 auto 34px}
+.links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--gold-dim)}
+
+@media (max-width:760px){
+  .about{grid-template-columns:1fr;gap:36px}
+  nav a{margin-left:16px}
+  section{padding:72px 0}
+}
+@media (prefers-reduced-motion:reduce){.logo{animation:none}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <h1>Tu Nombre</h1>
-  <p>Analista de finanzas | Tacna, Perú</p>
-  <h2>Experiencia</h2>
-  <ul>
-    <li>Análisis financiero y presupuestos</li>
-    <li>Excel, Power BI y modelado financiero</li>
-  </ul>
-  <h2>Contacto</h2>
-  <p><a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#inicio">Robert</a>
+    <nav aria-label="Principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#areas">Áreas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" style="border-top:0">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 400 350" role="img" aria-label="Triángulo con las palabras Illumination, Wisdom y Peace, y el símbolo del infinito al centro">
+      <polygon class="tri" points="200,52 48,300 352,300"/>
+      <line class="tie" x1="200" y1="52" x2="200" y2="34"/>
+      <line class="tie" x1="48" y1="300" x2="72" y2="326"/>
+      <line class="tie" x1="352" y1="300" x2="328" y2="326"/>
+      <path class="inf" transform="translate(200,228)" d="M-34,0 C-34,-20 -9,-20 0,0 C9,20 34,20 34,0 C34,-20 9,-20 0,0 C-9,20 -34,20 -34,0 Z"/>
+      <text x="200" y="26">ILLUMINATION</text>
+      <text x="82" y="342">WISDOM</text>
+      <text x="318" y="342">PEACE</text>
+    </svg>
+    <h1>Estrategia, operaciones e inteligencia artificial</h1>
+    <p class="lead">Soy Robert, Gerente de Comercialización y Proyectos. Convierto procesos comerciales en sistemas que escalan, con disciplina operativa y automatización.</p>
+    <a class="cta" href="#contacto">Hablemos de tu proyecto</a>
+  </div>
+</section>
+
+<section id="perfil">
+  <div class="wrap about">
+    <div>
+      <h2>Una trayectoria construida sobre la disciplina</h2>
+      <p>Lidero proyectos de marketing digital y operaciones con visión estratégica y metodologías ágiles, integrando soluciones de inteligencia artificial en la prospección comercial, la implementación de CRM y la estandarización de procesos.</p>
+      <p>Mi formación en aviación, seguridad aeroportuaria y logística compleja me enseñó a evaluar variables y riesgos antes de decidir, igual que se hace con un plan de vuelo. Esa misma lógica la aplico a cada proyecto.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Gerente de Comercialización y Proyectos</b>Instituto profesional ATENHUB de inteligencia artificial</li>
+      <li><b>Operaciones y mercado peruano</b>Prospección comercial, CRM e investigación de mercado</li>
+      <li><b>Capitán de la Reserva Activa de Aviación</b>Piloto profesional, especializado en AVSEC y gestión aeroportuaria</li>
+      <li><b>Tacna, Perú</b>Trabajo remoto con equipos internacionales</li>
+    </ul>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <h2>Dónde puedo aportar valor</h2>
+    <div class="areas">
+      <article class="area"><h3>Comercialización digital</h3><p>Estrategia de marca, campañas y embudos orientados a resultados medibles.</p></article>
+      <article class="area"><h3>Operaciones y CRM</h3><p>Procesos estandarizados, seguimiento comercial y operación ordenada de punta a punta.</p></article>
+      <article class="area"><h3>Automatización con IA</h3><p>Agentes, bots e integraciones que reducen trabajo manual en equipos pequeños y medianos.</p></article>
+      <article class="area"><h3>Mercados y análisis cuantitativo</h3><p>Desarrollo y validación de estrategias algorítmicas con enfoque en gestión de riesgo.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2>Conversemos</h2>
+    <p>Si buscas ordenar tu operación comercial, automatizarla o posicionar tu marca, escríbeme y definimos por dónde empezar.</p>
+    <div class="links">
+      <a class="cta" href="mailto:TU-CORREO@EJEMPLO.COM">Escribir por correo</a>
+      <a class="cta" href="https://wa.me/51TUNUMERO">WhatsApp</a>
+      <a class="cta" href="https://www.linkedin.com/in/TU-USUARIO">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Robert. Tacna, Perú.</footer>
 </body>
 </html>
